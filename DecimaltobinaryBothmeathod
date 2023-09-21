@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+int decimaltobinarym1(int n)
+{
+    int i = 0;
+    int ans = 0;
+    while (n > 0)
+    {
+        int bit = n % 2;
+        ans = bit * pow(10, i++) + ans;
+        n = n / 2;
+    }
+    return ans;
+}
+int decimaltobinarym2(int n)
+{
+    int ans = 0;
+    int i = 0;
+    while (n > 0)
+    {
+        int bit = n & 1;
+        ans = bit * pow(10, i++) + ans;
+        n = n >> 1;
+    }
+    return ans;
+}
+int main()
+{
+    int n;
+    cout<<"Enter a number"<<endl;
+    cin >> n;
+    cout<<"Decimal representation "<<binarytodecimal(n)<<endl;
+    int b1=decimaltobinarym1(n);
+    int b2= decimaltobinarym2(n);
+    // cout << "Meathod 1 " << b1 << endl;
+    // cout << "Meathod 2 " << b2 << endl;
+}
