@@ -15,6 +15,6 @@ int main(){
   int binaryno;
   cout<<"Enter a number"<<endl;
   cin>>binaryno;
-  cout<<"Decimal representation "<<binarytodecimal(binaryno)<<endl;
+  cout<<"Decimal representation "<<binarytodecimal(binaryno)<<endl;   
   
 }
