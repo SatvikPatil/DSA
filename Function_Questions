@@ -1,0 +1,124 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+float areaofcircle(float radius)
+{
+    float pi = 3.14;
+    return pi * radius * radius;
+}
+int getfactorial(int num)
+{
+    int fact = 1;
+    for (int i = 1; i <= num; ++i)
+    {
+        fact = fact * i;
+    }
+    return fact;
+}
+bool checkprime(int num)
+{
+    for (int i = 2; i < num; i++)
+    {
+        if (num % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+int digittointeger(int n)
+{
+    while (n > 0)
+    {
+        int digit = n % 10;
+        cout << digit << " ";
+        n = n / 10;
+    }
+    return 0;
+}
+int getsetbitm1(int num)
+{
+    int count = 0;
+    while (num != 0)
+    {
+        int bit = num % 2;
+        if (bit == 1)
+        {
+            count++;
+        }
+        num = num / 2;
+    }
+    return count;
+}
+int getsetbitm2(int num)
+{
+    int count = 0;
+    while (num != 0)
+    {
+        int bit = num & 1;
+        if (bit == 1)
+        {
+            count++;
+        }
+        num = num >> 1;
+    }
+    return count;
+}
+bool checkeven(int n)
+{
+    if (n & 1 == 1)
+        return false;
+    else
+        return true;
+}
+int main()
+{
+    // float radius;
+    // cout<<"Enter the radius"<<endl;
+    // cin>>radius;
+    // cout<<"Area of circle is "<<areaofcircle(radius)<<endl;
+
+    // int num;
+    // cout<<"Enter a number"<<endl;
+    // cin>>num;
+    // cout<<"Factorial of "<<num <<" is "<<getfactorial(num)<<endl;
+
+    // int num;
+    // cout << "Enter a number" << endl;
+    // cin >> num;
+    // // if(checkprime(num))
+    // // {
+    // //     cout<<"prime"<<endl;
+    // // }else{
+    // //     cout<<"not prime"<<endl;
+    // // }
+    // for (int i = 2; i <= num; i++)
+    // {
+    //     bool prime = checkprime(i);
+    //     if (prime)
+    //     {
+    //         cout << i << " ";
+    //     }
+    // }
+
+    // int num;
+    // cout<<"Enter a number"<<endl;
+    // cin>>num;
+    // cout<<"Digits to integer"<<digittointeger(num)<<endl;
+
+    // int num;
+    // cout<<"Enter a number "<<endl;
+    // cin>>num;
+    // // cout<<"Total Setbit "<<getsetbitm1(num)<<endl;
+    // cout<<"Total Setbit "<<getsetbitm2(num)<<endl;
+
+    // int num;
+    // cout << "Enter a number " << endl;
+    // cin >> num;
+    // if (checkeven(num))
+    //     cout << " Even number" << endl;
+    // else
+    //     cout << "Odd number" << endl;
+
+    // return 0;
+}
